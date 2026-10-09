@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-paper: #E3E3D8;
+  --bg-white: #FFFFFF;
+  --primary: #B12C41;
+  --primary-hover: #962538;
+  --dark: #1A1A1A;
+  --dark-soft: #2E2428;
+  --bark: #1A1A1A;
+  --text: #1A1A1A;
+  --text-muted: #5C5650;
+  --text-meta: #8A454F;
+  --nav-link: #3D3834;
+  --space-section: clamp(3rem, 8vw, 5.5rem);
+  --space-block: clamp(1.25rem, 3vw, 2rem);
+  --font-display: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --max-content: 960px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.65;
+  background-color: var(--bg-paper);
+  overflow-x: hidden;
+}
+
+.deco {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--dark);
+}
+.deco-candle { width: 72px;  bottom: 12%; left: 3%;  opacity: 0.55; }
+.deco-clock  { width: 96px;  top: 18%;  right: 4%; opacity: 0.5; }
+.deco-chair  { width: 88px;  bottom: 14%; right: 5%; opacity: 0.48; }
+.deco-mask   { width: 80px;  top: 22%;  left: 4%;  opacity: 0.45; }
+
+/* —— 顶栏 —— */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(227, 227, 216, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+}
+
+.site-header__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo-mark {
+  text-decoration: none;
+  border: 2px solid var(--dark);
+  padding: 0.35rem 0.85rem;
+  display: inline-block;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.logo-mark__text {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.logo-mark:hover {
+  background: var(--dark);
+}
+
+.logo-mark:hover .logo-mark__text {
+  color: var(--bg-white);
+}
+
+.site-nav {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.site-nav a {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--nav-link);
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--primary);
+}
+
+.page {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: var(--space-section) 1.5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* —— 引言区（Rusty Lake 式左对齐 + 大留白）—— */
+.intro {
+  max-width: 36rem;
+  margin-bottom: var(--space-section);
+}
+
+.intro__label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-meta);
+  margin-bottom: 0.75rem;
+}
+
+.intro__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5.5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: var(--space-block);
+}
+
+.intro__lead {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 32rem;
+  margin-bottom: 1.75rem;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-pill--primary {
+  background: var(--primary);
+  color: var(--bg-white);
+}
+
+.btn-pill--primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-pill__icon {
+  flex-shrink: 0;
+}
+
+/* —— 家族树舞台 —— */
+.tree-stage {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto var(--space-section);
+  aspect-ratio: 800 / 700;
+}
+
+.tree-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 项目缩略图：白卡片、直角、无阴影 */
+.frame {
+  position: absolute;
+  width: 13%;
+  aspect-ratio: 1 / 1;
+  background: var(--bg-white);
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  transition: outline-color 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+  display: block;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+}
+
+.frame-left  { left: 21.25%; top: 40.7%; }
+.frame-top   { left: 43.5%;  top: 30.7%; }
+.frame-right { left: 65.75%; top: 40.7%; }
+
+.frame::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 18px;
+  background: var(--bark);
+  opacity: 0.85;
+}
+
+.frame > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: none;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38%;
+  aspect-ratio: 1;
+  background: var(--primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.play::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-left: 11px solid var(--bg-white);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.frame:hover .play {
+  background: var(--primary-hover);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.frame:hover {
+  outline-color: var(--primary);
+  transform: translateY(-2px);
+  /* 悬停时把整张卡片（含放大预览图）提升到最顶层，避免被其他卡片遮挡 */
+  z-index: 100;
+}
+
+.preview {
+  position: absolute;
+  width: 280px;
+  max-width: 38vw;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-white);
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  outline: 2px solid rgba(26, 26, 26, 0.08);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.frame-left .preview {
+  right: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.frame-top .preview,
+.frame-right .preview {
+  left: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.frame:hover .preview {
+  opacity: 1;
+}
+
+.nameplate {
+  position: absolute;
+  background: var(--bg-white);
+  border: none;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(0.65rem, 1.4vw, 0.78rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  white-space: nowrap;
+  transform: translateX(-50%);
+  box-shadow: none;
+}
+
+/* —— 下方卡片网格（参考博客区块）—— */
+.project-notes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-block);
+  margin-bottom: var(--space-section);
+}
+
+.note-card {
+  background: var(--bg-white);
+  padding: 1.5rem 1.35rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.note-card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.note-card__text {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.note-card__link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: 0.25rem;
+}
+
+.note-card__link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* —— 底部波浪 + 深色条 —— */
+.wave-band {
+  position: relative;
+  color: var(--dark-soft);
+  margin-top: 0;
+}
+
+.wave-band__svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+
+.wave-band__bar {
+  height: 8px;
+  background: var(--primary);
+}
+
+.site-footer {
+  background: var(--dark-soft);
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  padding: 1.35rem 1.5rem 1.75rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+  .project-notes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .deco {
+    display: none;
+  }
+
+  .site-nav {
+    gap: 0.75rem;
+  }
+
+  .site-nav a {
+    font-size: 0.75rem;
+  }
+
+  .tree-stage {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1rem 0;
+  }
+
+  .tree-svg {
+    display: none;
+  }
+
+  .frame,
+  .frame-left,
+  .frame-top,
+  .frame-right {
+    position: static;
+    width: min(220px, 78vw);
+  }
+
+  .frame::before {
+    display: none;
+  }
+
+  .nameplate {
+    position: static;
+    transform: none;
+    margin-top: -1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .preview {
+    display: none;
+  }
+
+  .project-notes {
+    margin-top: 1rem;
+  }
+}

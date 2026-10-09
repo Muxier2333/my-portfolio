@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>练品言的作品集 · Family Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <svg class="deco deco-candle" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="40" y="80" width="20" height="110" fill="currentColor" opacity="0.35"/>
+        <ellipse cx="50" cy="70" rx="8" ry="18" fill="currentColor" opacity="0.4"/>
+        <line x1="50" y1="55" x2="50" y2="65" stroke="currentColor" stroke-width="2" opacity="0.45"/>
+    </svg>
+    <svg class="deco deco-clock" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="60" cy="60" r="45" fill="none" stroke="currentColor" stroke-width="4" opacity="0.35"/>
+        <line x1="60" y1="60" x2="60" y2="30" stroke="currentColor" stroke-width="3" opacity="0.35"/>
+        <line x1="60" y1="60" x2="80" y2="65" stroke="currentColor" stroke-width="3" opacity="0.35"/>
+        <path d="M35 105 L25 130 L95 130 L85 105 Z" fill="currentColor" opacity="0.3"/>
+    </svg>
+    <svg class="deco deco-chair" viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="30" y="20" width="60" height="8" fill="currentColor" opacity="0.32"/>
+        <rect x="35" y="28" width="6" height="60" fill="currentColor" opacity="0.32"/>
+        <rect x="79" y="28" width="6" height="60" fill="currentColor" opacity="0.32"/>
+        <rect x="25" y="88" width="70" height="10" fill="currentColor" opacity="0.32"/>
+        <rect x="30" y="98" width="6" height="50" fill="currentColor" opacity="0.32"/>
+        <rect x="84" y="98" width="6" height="50" fill="currentColor" opacity="0.32"/>
+    </svg>
+    <svg class="deco deco-mask" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 10 C20 20, 15 60, 30 95 L50 110 L70 95 C85 60, 80 20, 50 10 Z" fill="currentColor" opacity="0.28"/>
+        <circle cx="38" cy="50" r="5" fill="#E3E3D8" opacity="0.9"/>
+        <circle cx="62" cy="50" r="5" fill="#E3E3D8" opacity="0.9"/>
+    </svg>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="logo-mark" href="#" aria-label="回到顶部">
+                <span class="logo-mark__text">练品言</span>
+            </a>
+            <nav class="site-nav" aria-label="页面导航">
+                <a href="#works">作品</a>
+                <a href="#about">关于</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page">
+        <section class="intro" id="about">
+            <p class="intro__label">Portfolio</p>
+            <h1 class="intro__title">练品言的作品集</h1>
+            <p class="intro__lead">
+                以家族树为线索，把网页小项目挂在枝桠上——点击画框进入演示，悬停可预览封面。
+            </p>
+            <a class="btn-pill btn-pill--primary" href="#works">
+                <span>浏览作品</span>
+                <svg class="btn-pill__icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 16l-6-6h12z"/></svg>
+            </a>
+        </section>
+
+        <div class="tree-stage" id="works">
+            <svg class="tree-svg" viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <defs>
+                    <linearGradient id="barkGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="#1A1A1A"/>
+                        <stop offset="55%" stop-color="#2B2420"/>
+                        <stop offset="100%" stop-color="#3D3530"/>
+                    </linearGradient>
+                </defs>
+                <g stroke="url(#barkGrad)" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                    <!-- 根须：更舒展的弧线 -->
+                    <path d="M400 682 C 340 688, 260 698, 175 702" stroke-width="10" opacity="0.95"/>
+                    <path d="M400 682 C 460 688, 540 698, 625 702" stroke-width="10" opacity="0.95"/>
+                    <path d="M400 682 C 372 694, 348 700, 318 702" stroke-width="5.5"/>
+                    <path d="M400 682 C 428 694, 452 700, 482 702" stroke-width="5.5"/>
+                    <path d="M295 696 C 268 700, 242 702, 218 704" stroke-width="3.5" opacity="0.85"/>
+                    <path d="M505 696 C 532 700, 558 702, 582 704" stroke-width="3.5" opacity="0.85"/>
+                    <path d="M350 699 C 330 701, 312 702, 295 703" stroke-width="2" opacity="0.6"/>
+                    <path d="M450 699 C 470 701, 488 702, 505 703" stroke-width="2" opacity="0.6"/>
+
+                    <!-- 主干：轻微 S 形，更自然 -->
+                    <path d="M400 682 C 392 580, 408 470, 400 368" stroke-width="26"/>
+
+                    <!-- 左主枝 -->
+                    <path d="M400 368 C 348 340, 268 288, 168 205" stroke-width="16"/>
+                    <path d="M318 318 C 292 298, 272 272, 258 242" stroke-width="7.5"/>
+                    <path d="M278 278 C 258 262, 242 248, 232 232" stroke-width="4"/>
+                    <path d="M248 248 C 235 238, 222 228, 212 218" stroke-width="2.5" opacity="0.75"/>
+                    <path d="M290 305 C 268 292, 248 282, 228 272" stroke-width="5"/>
+                    <path d="M220 260 C 205 252, 192 245, 182 238" stroke-width="2" opacity="0.65"/>
+
+                    <!-- 右主枝 -->
+                    <path d="M400 368 C 452 340, 532 288, 632 205" stroke-width="16"/>
+                    <path d="M482 318 C 508 298, 528 272, 542 242" stroke-width="7.5"/>
+                    <path d="M522 278 C 542 262, 558 248, 568 232" stroke-width="4"/>
+                    <path d="M552 248 C 565 238, 578 228, 588 218" stroke-width="2.5" opacity="0.75"/>
+                    <path d="M510 305 C 532 292, 552 282, 572 272" stroke-width="5"/>
+                    <path d="M580 260 C 595 252, 608 245, 618 238" stroke-width="2" opacity="0.65"/>
+
+                    <!-- 顶枝 -->
+                    <path d="M400 368 C 398 310, 402 248, 400 188" stroke-width="12"/>
+                    <path d="M400 300 C 382 288, 368 272, 358 252" stroke-width="5.5"/>
+                    <path d="M400 300 C 418 288, 432 272, 442 252" stroke-width="5.5"/>
+                    <path d="M400 248 C 388 236, 382 222, 378 206" stroke-width="3.5"/>
+                    <path d="M400 248 C 412 236, 418 222, 422 206" stroke-width="3.5"/>
+                    <path d="M400 220 C 400 208, 398 198, 394 188" stroke-width="2" opacity="0.7"/>
+                </g>
+                <!-- 叶片：大小不一、略透明 -->
+                <g fill="#1A1A1A" opacity="0.88">
+                    <ellipse cx="158" cy="192" rx="6" ry="10" transform="rotate(-28 158 192)"/>
+                    <ellipse cx="178" cy="228" rx="4.5" ry="8" transform="rotate(-42 178 228)"/>
+                    <ellipse cx="208" cy="212" rx="3" ry="5.5" transform="rotate(-15 208 212)"/>
+                    <ellipse cx="238" cy="232" rx="4" ry="7" transform="rotate(-22 238 232)"/>
+                    <ellipse cx="642" cy="192" rx="6" ry="10" transform="rotate(28 642 192)"/>
+                    <ellipse cx="622" cy="228" rx="4.5" ry="8" transform="rotate(42 622 228)"/>
+                    <ellipse cx="592" cy="212" rx="3" ry="5.5" transform="rotate(15 592 212)"/>
+                    <ellipse cx="562" cy="232" rx="4" ry="7" transform="rotate(22 562 232)"/>
+                    <ellipse cx="400" cy="178" rx="5.5" ry="10"/>
+                    <ellipse cx="385" cy="198" rx="3" ry="5" transform="rotate(-20 385 198)"/>
+                    <ellipse cx="415" cy="198" rx="3" ry="5" transform="rotate(20 415 198)"/>
+                    <ellipse cx="362" cy="252" rx="3.5" ry="6.5" transform="rotate(-32 362 252)"/>
+                    <ellipse cx="438" cy="252" rx="3.5" ry="6.5" transform="rotate(32 438 252)"/>
+                    <ellipse cx="352" cy="268" rx="2.5" ry="4.5" transform="rotate(-40 352 268)" opacity="0.65"/>
+                    <ellipse cx="448" cy="268" rx="2.5" ry="4.5" transform="rotate(40 448 268)" opacity="0.65"/>
+                </g>
+            </svg>
+
+            <a class="frame frame-left card-project" href="https://register-kappa-drab.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img src="image/register.png" alt="Register Form 项目封面">
+                <span class="play" aria-hidden="true"></span>
+                <span class="preview"><img src="image/register.png" alt=""></span>
+            </a>
+            <div class="nameplate" style="left: 27.75%; top: 57.5%;">Register Form</div>
+
+            <a class="frame frame-top card-project" href="https://quiz-game-nine-beta-55.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img src="image/quiz-game.png" alt="Quiz Game 项目封面">
+                <span class="play" aria-hidden="true"></span>
+                <span class="preview"><img src="image/quiz-game.png" alt=""></span>
+            </a>
+            <div class="nameplate" style="left: 50%; top: 47.5%;">Quiz Game</div>
+
+            <a class="frame frame-right card-project" href="https://recipe-finder-zeta-nine.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <img src="image/recipe-finder.png" alt="Recipe Finder 项目封面">
+                <span class="play" aria-hidden="true"></span>
+                <span class="preview"><img src="image/recipe-finder.png" alt=""></span>
+            </a>
+            <div class="nameplate" style="left: 72.25%; top: 57.5%;">Recipe Finder</div>
+        </div>
+
+        <section class="project-notes" aria-label="作品说明">
+            <article class="note-card">
+                <h2 class="note-card__title">Register Form</h2>
+                <p class="note-card__text">表单注册与校验练习，强调输入反馈与布局节奏。</p>
+                <a class="note-card__link" href="https://register-kappa-drab.vercel.app/" target="_blank" rel="noopener noreferrer">打开项目 →</a>
+            </article>
+            <article class="note-card">
+                <h2 class="note-card__title">Quiz Game</h2>
+                <p class="note-card__text">互动问答小游，展示状态切换与计分逻辑。</p>
+                <a class="note-card__link" href="https://quiz-game-nine-beta-55.vercel.app/" target="_blank" rel="noopener noreferrer">打开项目 →</a>
+            </article>
+            <article class="note-card">
+                <h2 class="note-card__title">Recipe Finder</h2>
+                <p class="note-card__text">食谱检索界面，练习列表、筛选与内容呈现。</p>
+                <a class="note-card__link" href="https://recipe-finder-zeta-nine.vercel.app/" target="_blank" rel="noopener noreferrer">打开项目 →</a>
+            </article>
+        </section>
+    </div>
+
+    <div class="wave-band" aria-hidden="true">
+        <svg class="wave-band__svg" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C240,70 480,10 720,35 C960,60 1200,15 1440,45 L1440,80 L0,80 Z" fill="currentColor"/>
+        </svg>
+        <div class="wave-band__bar"></div>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2026 练品言 · Inspired by Rusty Lake</p>
+    </footer>
+</body>
+</html>
